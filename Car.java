@@ -41,13 +41,11 @@ public class Car
         if(speed > 0 )
         {
             speed -= 20;
-        }
-        else if (speed < 0)
-        {
+        
+        if (speed < 0) // logic error i guess here 
             speed = 0;
-
         engine.setSpeed(speed);
         System.out.println("Car Speed " + speed);
-        }
     }
+}
 }

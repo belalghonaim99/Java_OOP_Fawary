@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("---- Changing Engine ----");
 
-        CarFactory.replaceEngine(car, "gas");
+        CarFactory.replaceEngine(car, "ElectroniC");
 
         car.start();
         car.accelerate();

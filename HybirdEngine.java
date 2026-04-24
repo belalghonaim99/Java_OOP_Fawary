@@ -48,6 +48,9 @@ public class HybirdEngine implements Engine
     }
     public void stop()
     {
+        speed = 0;
+        gasEngine.stop();
+        electronicEngine.stop();
         System.out.println("Hybird Engine Stopped");
     }
 }

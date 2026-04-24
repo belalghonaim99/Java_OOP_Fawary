@@ -26,6 +26,6 @@ public class Electronic implements Engine{
     }
     public void stop()
     {
-        System.out.println("Electric Engine Stopped");
+        System.out.println("Electric Engine Started");
     }
 }
