@@ -10,12 +10,12 @@ public class HybirdEngine implements Engine
         if(speed < 50)
         {
             electronicEngine.setSpeed(speed);
-            System.out.println("Using Electric Engine Your Current Speed below {speed}");
+            System.out.println("Using Electric Engine Your Current Speed: " + speed);
         }
         else
         {
             gasEngine.setSpeed(speed);
-            System.out.println("Using Gas Engine {speed}");
+            System.out.println("Switch to  Gas Engine Your Current Speed:  " + speed);
         }
     }
     public void increase()
