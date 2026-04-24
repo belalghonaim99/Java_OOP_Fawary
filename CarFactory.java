@@ -1,40 +1,31 @@
 public class CarFactory {
-    public static Car createCar(String engineType)
-    {
-            if(engineType.toLowerCase()== "gas")
-            {
+
+    public static Car createCar(String engineType) {
+        switch (engineType.toLowerCase()) {
+            case "gas":
                 return new Car(new Gas());
-            }
-            else if (engineType.toLowerCase() == "electric")
-            {
+            case "electric":
                 return new Car(new Electronic());
-            } 
-            else if(engineType.toLowerCase() == "hybrid")
-            {
+            case "hybrid":
                 return new Car(new HybirdEngine());
-            }
-            else
-            {
+            default:
                 throw new IllegalArgumentException("Invalid engine type");
-            }
         }
-    public static void replaceEngine(Car car, String engineType)
-    {
-        if(engineType.toLowerCase().equals("gas"))
-        {
-            car.setEngine(new Gas());
-        }
-        else if(engineType.toLowerCase().equals("electronic"))
-        {
-            car.setEngine(new Electronic());
-        }
-        else if(engineType.toLowerCase().equals("hybrid"))
-        {
-            car.setEngine(new HybirdEngine());
-        }
-        else
-        {
-            System.out.println("Invalid Engine Type");
+    }
+
+    public static void replaceEngine(Car car, String engineType) {
+        switch (engineType.toLowerCase()) {
+            case "gas":
+                car.setEngine(new Gas());
+                break;
+            case "electric":
+                car.setEngine(new Electronic());
+                break;
+            case "hybrid":
+                car.setEngine(new HybirdEngine());
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid engine type");
         }
     }
 }

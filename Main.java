@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
+
         Car car = CarFactory.createCar("hybrid");
+
         car.start();
         car.accelerate(); // 20
         car.accelerate(); // 40
@@ -10,10 +12,10 @@ public class Main {
 
         System.out.println("---- Changing Engine ----");
 
-        CarFactory.replaceEngine(car, "ElectroniC");
+        CarFactory.replaceEngine(car, "Gas");
 
         car.start();
         car.accelerate();
         car.stop();
-}
+    }
 }
